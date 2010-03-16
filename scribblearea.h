@@ -55,18 +55,12 @@ class ScribbleArea : public QWidget
 public:
     ScribbleArea(QWidget *parent = 0);
 
-    bool openImage(const QString &fileName);
-    bool saveImage(const QString &fileName, const char *fileFormat);
-    void setPenColor(const QColor &newColor);
-    void setPenWidth(int newWidth);
-
     bool isModified() const { return modified; }
     QColor penColor() const { return myPenColor; }
     int penWidth() const { return myPenWidth; }
 
 public slots:
     void clearImage();
-    void print();
 
 protected:
     void mousePressEvent(QMouseEvent *event);

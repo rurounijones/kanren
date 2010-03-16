@@ -7,9 +7,9 @@ TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
     scribblearea.cpp \
-    togglebutton.cpp
+    kanjilabel.cpp
 HEADERS += mainwindow.h \
     scribblearea.h \
-    togglebutton.h
+    kanjilabel.h
 FORMS += mainwindow.ui
 OTHER_FILES += README.txt

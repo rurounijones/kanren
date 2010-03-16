@@ -33,7 +33,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="ToggleButton" name="pushButton_3">
+        <widget class="QPushButton" name="pushButton_3">
          <property name="text">
           <string>Toggle Kanji</string>
          </property>
@@ -42,7 +42,7 @@
        <item>
         <widget class="QPushButton" name="pushButton_2">
          <property name="text">
-          <string>Toggle Text</string>
+          <string>Clear Writing</string>
          </property>
         </widget>
        </item>
@@ -124,7 +124,7 @@
        <property name="autoFillBackground">
         <bool>true</bool>
        </property>
-       <widget class="QLabel" name="label">
+       <widget class="KanjiLabel" name="label">
         <property name="geometry">
          <rect>
           <x>7</x>
@@ -134,7 +134,7 @@
          </rect>
         </property>
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -182,31 +182,50 @@
    <extends>QWidget</extends>
    <header>scribblearea.h</header>
    <container>1</container>
+   <slots>
+    <slot>clearImage()</slot>
+   </slots>
   </customwidget>
   <customwidget>
-   <class>ToggleButton</class>
-   <extends>QPushButton</extends>
-   <header>togglebutton.h</header>
+   <class>KanjiLabel</class>
+   <extends>QLabel</extends>
+   <header>kanjilabel.h</header>
    <slots>
-    <slot>setStatus(bool)</slot>
+    <slot>toggleVisibility()</slot>
    </slots>
   </customwidget>
  </customwidgets>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton_3</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>label</receiver>
-   <slot>setVisible(bool)</slot>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>clearImage()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>81</x>
-     <y>143</y>
+     <x>245</x>
+     <y>151</y>
     </hint>
     <hint type="destinationlabel">
-     <x>153</x>
-     <y>340</y>
+     <x>396</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>label</receiver>
+   <slot>toggleVisibility()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>353</y>
     </hint>
    </hints>
   </connection>

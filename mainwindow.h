@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "scribblearea.h"
-#include "togglebutton.h"
+#include "kanjilabel.h"
 
 namespace Ui {
     class MainWindow;
