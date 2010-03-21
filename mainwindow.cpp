@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    currentItem = new StudyItem(this);
+    QObject::connect(ui->nextKanjibutton,SIGNAL(clicked()),currentItem,SLOT(nextKanji()));
 }
 
 MainWindow::~MainWindow()
@@ -23,4 +25,11 @@ void MainWindow::changeEvent(QEvent *e)
     default:
         break;
     }
+}
+
+void MainWindow::updateWidgets(QString kanji, QString translation)
+{
+    ui->writingPadWidget->clearImage();
+    this->ui->kanjiTemplateLabel->setText(kanji);
+    this->ui->translationLabel->setText(translation);
 }

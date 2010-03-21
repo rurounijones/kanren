@@ -54,7 +54,7 @@ ScribbleArea::ScribbleArea(QWidget *parent)
 }
 void ScribbleArea::clearImage()
 {
-    image.fill(qRgb(255, 255, 255));
+    image.fill(qRgb(0, 0, 0));
     modified = true;
     update();
 }
@@ -87,6 +87,7 @@ void ScribbleArea::paintEvent(QPaintEvent *event)
     QRect dirtyRect = event->rect();
     painter.drawImage(dirtyRect, image, dirtyRect);
 }
+
 void ScribbleArea::resizeEvent(QResizeEvent *event)
 {
     if (width() > image.width() || height() > image.height()) {
@@ -118,7 +119,7 @@ void ScribbleArea::resizeImage(QImage *image, const QSize &newSize)
         return;
 
     QImage newImage(newSize, QImage::Format_RGB32);
-    newImage.fill(qRgb(255, 255, 255));
+    newImage.fill(qRgb(0, 0, 0));
     QPainter painter(&newImage);
     painter.drawImage(QPoint(0, 0), *image);
     *image = newImage;
