@@ -17,7 +17,7 @@ public:
     ~MainWindow();
 
 public slots:
-    void updateWidgets(QString kanji, QString translation);
+    void updateWidgets(QString kanji, QString translation, QString onyoumi, QString kunyoumi);
 
 protected:
     void changeEvent(QEvent *e);

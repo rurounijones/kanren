@@ -10,9 +10,10 @@ Q_OBJECT
 public:
     explicit StudyItem(QObject *parent = 0);
 signals:
-    void itemUpdated(QString kanji,QString translation);
+    void itemUpdated(QString kanji,QString translation, QString onyoumi, QString kunyoumi);
 public slots:
     void nextKanji();
+    void previousKanji();
 
 private:
     QSqlDatabase db;

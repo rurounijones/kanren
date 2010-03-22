@@ -76,7 +76,7 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <layout class="QHBoxLayout" name="buttonFirstHorizontalLayout">
          <item>
           <widget class="QPushButton" name="toggleKanjiButton">
            <property name="text">
@@ -93,25 +93,22 @@ Writing</string>
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QPushButton" name="nextKanjibutton">
-           <property name="text">
-            <string>Next
-Kanji</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <layout class="QHBoxLayout" name="translationHorizontalLayout">
          <item>
-          <widget class="QLabel" name="translationLabelText">
+          <widget class="QLabel" name="translationLabel">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
            </property>
            <property name="text">
             <string>Translation</string>
@@ -122,12 +119,146 @@ Kanji</string>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="translationLabel">
+          <widget class="QLabel" name="translationTextLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>TextLabel</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="onyoumiHorizontalLayout">
+         <item>
+          <widget class="QLabel" name="onyoumiLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Chinese
+Reading</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="onyoumiTextLabel">
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="kunyoumiHorizontalLayout">
+         <item>
+          <widget class="QLabel" name="kunyoumiLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Japanese
+Reading</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="kunyoumiTextLabel">
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="buttonSecondHorizontalLayout">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="previousKanjiButton">
+           <property name="text">
+            <string>Previous
+Kanji</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="nextKanjiButton">
+           <property name="text">
+            <string>Next
+Kanji</string>
            </property>
           </widget>
          </item>
@@ -177,8 +308,8 @@ Kanji</string>
    <slot>toggleVisibility()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>489</x>
-     <y>131</y>
+     <x>529</x>
+     <y>55</y>
     </hint>
     <hint type="destinationlabel">
      <x>224</x>
@@ -193,8 +324,8 @@ Kanji</string>
    <slot>clearImage()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>610</x>
-     <y>129</y>
+     <x>658</x>
+     <y>55</y>
     </hint>
     <hint type="destinationlabel">
      <x>396</x>
