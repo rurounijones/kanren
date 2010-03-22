@@ -15,4 +15,5 @@ HEADERS += mainwindow.h \
     kanjilabel.h \
     studyitem.h
 FORMS += mainwindow.ui
-OTHER_FILES += README.txt
+OTHER_FILES += README.txt \
+    COPYING.txt
